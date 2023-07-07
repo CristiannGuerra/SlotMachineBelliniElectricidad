@@ -35,7 +35,7 @@ export default class Scoreboard {
     private generate(appWidth: number, appHeight: number) {
         const style = new PIXI.TextStyle({
             fontFamily: 'Arial',
-            fontSize: 18,
+            fontSize: 24,
             fill: 'yellow',
         });
 
