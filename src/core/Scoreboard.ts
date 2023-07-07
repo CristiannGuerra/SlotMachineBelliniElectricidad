@@ -34,10 +34,11 @@ export default class Scoreboard {
 
     private generate(appWidth: number, appHeight: number) {
         const style = new PIXI.TextStyle({
-            fontFamily: 'Arial',
-            fontSize: 24,
-            fill: 'yellow',
+            fill: "#3987d0",
+            fontFamily: "\"Arial Black\", Gadget, sans-serif",
+            fontSize: 20
         });
+        
 
         this.moneyText = new PIXI.Text(`Dinero: $${this.money}`, style);
         this.moneyText.y = 5;
