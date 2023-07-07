@@ -17,7 +17,7 @@ export default class Scoreboard {
     decrement() {
         if (!this.outOfMoney) {
             this.money -= this.bet;
-            this.moneyText.text = `Dinero $${this.money}`;
+            this.moneyText.text = `Dinero: $${this.money}`;
         }
         if (this.money - this.bet < 0) {
             this.outOfMoney = true;
@@ -35,7 +35,7 @@ export default class Scoreboard {
     private generate(appWidth: number, appHeight: number) {
         const style = new PIXI.TextStyle({
             fontFamily: 'Arial',
-            fontSize: 24,
+            fontSize: 18,
             fill: 'yellow',
         });
 
