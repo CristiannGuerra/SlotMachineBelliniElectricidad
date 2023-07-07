@@ -6,7 +6,7 @@ export default class Scoreboard {
     private winAmountText: PIXI.Text;
     private moneyText: PIXI.Text;
     private winAmount: number = 0;
-    private money: number = 100000;
+    private money: number = 1000;
     private bet: number = 1;
 
     constructor(app: PIXI.Application) {
@@ -17,7 +17,7 @@ export default class Scoreboard {
     decrement() {
         if (!this.outOfMoney) {
             this.money -= this.bet;
-            this.moneyText.text = `money: $${this.money}`;
+            this.moneyText.text = `Dinero $${this.money}`;
         }
         if (this.money - this.bet < 0) {
             this.outOfMoney = true;
@@ -26,9 +26,9 @@ export default class Scoreboard {
 
     increment() {
         this.money += this.bet * 2;
-        this.moneyText.text = `money: $${this.money}`;
+        this.moneyText.text = `Apuesta: $${this.money}`;
         this.winAmount += this.bet;
-        this.winAmountText.text = `win: $${this.winAmount}`;
+        this.winAmountText.text = `Ganado: $${this.winAmount}`;
         if (this.outOfMoney) this.outOfMoney = false;
     }
 
