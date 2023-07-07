@@ -39,13 +39,13 @@ export default class Scoreboard {
             fill: 'yellow',
         });
 
-        this.moneyText = new PIXI.Text(`money: $${this.money}`, style);
+        this.moneyText = new PIXI.Text(`Dinero: $${this.money}`, style);
         this.moneyText.y = 5;
 
-        const betText = new PIXI.Text(`bet: $${this.bet}`, style);
+        const betText = new PIXI.Text(`Apuesta: $${this.bet}`, style);
         betText.y = this.moneyText.height + 10;
 
-        this.winAmountText = new PIXI.Text(`win: $${this.winAmount}`, style);
+        this.winAmountText = new PIXI.Text(`Ganado: $${this.winAmount}`, style);
         this.winAmountText.y = betText.y + betText.height + 5;
 
         betText.x = this.moneyText.x = this.winAmountText.x = 10;
